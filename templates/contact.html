@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Old Car Prediction</title>
+    <title>Old Car Price Prediction</title>
     <!-- Add your CSS file or styles here -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -14,37 +14,82 @@
             padding: 0;
         }
 
-        header {
-            background-color: #333;
-            color: #fff;
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
             padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #007bff;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        section {
-            padding: 20px;
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select,
+        input[type="text"],
+        .btn-primary {
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            color: #ffffff;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        #prediction {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #007bff;
+        }
+          /* Custom styles for navbar */
+          .navbar-brand {
+            margin-right: 20px; /* Add spacing after "Old Car Price Prediction" */
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end; /* Shift navbar to the right */
+        }
+
+        /* Custom styles for navbar */
+        .navbar {
+            background-color: #007bff;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #0056b3;
         }
 
         footer {
-            background-color: #333;
+            background-color:  #007bff;
             color: #fff;
             text-align: center;
             padding: 10px;
@@ -52,32 +97,77 @@
             bottom: 0;
             width: 100%;
         }
+
+        /* Custom style for the contact section */
+        .contact-section {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section h2 {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .contact-section li {
+            margin-bottom: 10px;
+        }
+
+        .contact-section li strong {
+            color: #007bff;
+        }
+
+        .contact-section a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .contact-section a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #007bff;">
-    <a class="navbar-brand" href="#">Old Car Prediction</a>
+<!-- navbar.html -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Old Car Price Prediction</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="/about">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/EMI">EMI Calculator</a>
             </li>
         </ul>
     </div>
 </nav>
 
-<section>
+<!-- Your content here -->
+<section class="contact-section">
     <h2>Contact Us</h2>
     <p>Thank you for your interest in Old Car Prediction! We value your feedback, inquiries, and suggestions. Please feel free to reach out to us using any of the following methods:</p>
     <ul>
@@ -94,17 +184,21 @@
     </ul>
 </section>
 
+<!-- Footer -->
 <footer>
-    &copy; 2024 Old Car Prediction
+    &copy; 2024 Old Car Price Prediction
 </footer>
 
 <!-- Bootstrap JS CDN -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"
-        integrity="sha384-Zuk2nZmZqV5FvHrpu8+Tj+ioKNAj4+FX93+Y5Pc6vG2zmgkUiMlZ2fvg9M6fJwH"
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+        integrity="sha384-BE+tr5G9fzB80gTC5V"
         crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704
-</script
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75jBh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+
