@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Predictor</title>
+</head>
+<body>
+
+<!-- Placeholder for the navbar -->
+<div id="navbar-placeholder"></div>
+
+<!-- Script to dynamically load the navbar -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        fetch('E:\ai\project\car_price_predictor-master\templates\navbar.html') // Update the file path as needed
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('There was a problem fetching the navbar:', error);
+            });
+    });
+</script>
+
+<!-- Your other HTML content goes here -->
+
+</body>
+</html>
